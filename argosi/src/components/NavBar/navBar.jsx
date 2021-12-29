@@ -27,6 +27,7 @@ const NavBar = ({ user }) => {
                   Register
                 </NavDropdown.Item>
               </NavDropdown>
+              <Nav.Link href="/api/clients/userclients/">Clients</Nav.Link>
             </React.Fragment>
           )}
         </Nav>

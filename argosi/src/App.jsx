@@ -7,6 +7,9 @@ import "./App.css";
 import Login from "./components/Login/login";
 import NavBar from "./components/NavBar/navBar";
 import HomePage from "./components/HomePage/homePage";
+import ListClients from "./components/ClientList/clientList"
+
+
 
 class App extends Component {
   constructor(props) {
@@ -35,6 +38,7 @@ class App extends Component {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/userclients" element={<ListClients />} />
           </Routes>
         </Router>
         {/* <Footer /> */}
