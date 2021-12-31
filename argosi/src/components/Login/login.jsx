@@ -12,6 +12,10 @@ const Login = () => {
     postUser(userName, userPassword);
   };
 
+    function validateForm() {
+      return userName.length > 0 && userPassword.length > 0;
+    }
+
   const postUser = async (name, password) => {
     let payload = {username: name, password:password};
     let response = await axios.post(`http://localhost:3000/api/auth/login`, payload);
@@ -26,12 +30,12 @@ const Login = () => {
         <FormLabel>
           <h1>Login</h1>
         </FormLabel>
-        <Form id="login-form" onSubmit={onFormSubmit}>
+        <Form id="contact-form" onSubmit={onFormSubmit}>
           <Form.Group controlId="formBasicUsername">
             <Form.Control
               type="text"
               name="userName"
-              placeholder="userName"
+              placeholder="username"
               value={userName}
               onChange={(e) => setUserName(e.target.value)}
             />
@@ -46,7 +50,9 @@ const Login = () => {
               onChange={(e) => setUserPassword(e.target.value)}
             />
           </Form.Group>
-          <Button type="submit">Submit</Button>
+          <Button block size="lg" type="submit" disabled={!validateForm()}>
+            Login
+          </Button>
         </Form>
       </Container>
     </div>
