@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import "bootstrap/dist/css/bootstrap.css";
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
-import "./navBar.css";
 
-const NavBar = ({ user }) => {
+
+const Navigation = ({ user }) => {
   return (
     <div>
       <Navbar bg="black" variant="dark">
@@ -44,4 +44,4 @@ const NavBar = ({ user }) => {
   );
 };
 
-export default NavBar;
+export default Navigation;
