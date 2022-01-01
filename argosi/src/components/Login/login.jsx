@@ -18,7 +18,10 @@ const Login = () => {
 
   const postUser = async (name, password) => {
     let payload = {username: name, password:password};
-    let response = await axios.post(`http://localhost:3000/api/auth/login`, payload);
+    let response = await axios.post(
+      `http://127.0.0.1:8000/api/auth/login/`,
+      payload
+    );
       console.log(response.data);
       localStorage.setItem("token", response.data.access);
       window.location = "/"
@@ -44,7 +47,7 @@ const Login = () => {
           <Form.Group controlId="formBasicPassword">
             <Form.Control
               type="text"
-              name="userPassword"
+              name="password"
               placeholder="password"
               value={userPassword}
               onChange={(e) => setUserPassword(e.target.value)}

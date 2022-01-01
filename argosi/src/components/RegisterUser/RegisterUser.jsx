@@ -8,7 +8,6 @@ const RegisterUser = () => {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
   const [businessName, setBusinessName] = useState("");
 
   const newUser = {
@@ -17,14 +16,13 @@ const RegisterUser = () => {
     username: userName,
     password: password,
     email: email,
-    phonenumber: phoneNumber,
     businessname: businessName,
   };
 
   let handleSubmit = async (event) => {
     event.preventDefault();
     let response = await axios.post(
-      "http://localhost:3000/api/authentication",
+      "http://127.0.0.1:8000/api/auth/register/",
       newUser
     );
     console.log(response.data);
@@ -99,7 +97,7 @@ const RegisterUser = () => {
               type="text"
               placeholder="Business Name"
               onChange={(event) => setBusinessName(event.target.value)}
-              value={phoneNumber}
+              value={businessName}
             />
             &nbsp;
           </Form.Group>

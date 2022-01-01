@@ -23,7 +23,7 @@ const Navigation = ({ user }) => {
             <React.Fragment>
               <NavDropdown title="Login">
                 <NavDropdown.Item href="/login">Log In</NavDropdown.Item>
-                <NavDropdown.Item href="/login/register">
+                <NavDropdown.Item href="/register">
                   Register
                 </NavDropdown.Item>
               </NavDropdown>
