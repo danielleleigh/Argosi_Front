@@ -7,6 +7,7 @@ import Navigation from "./components/Navigation/navigation";
 import HomePage from "./components/HomePage/homePage";
 import Logout from "./components/Logout/logout";
 import RegisterUser from "./components/RegisterUser/RegisterUser";
+import DisplayClients from "./components/DisplayClients/displayClients";
 
 
 class App extends Component {
@@ -36,8 +37,9 @@ class App extends Component {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/login/" element={<Login />} />
-              <Route path="/register" element={<RegisterUser />} />
-              <Route path="/logout" element={<Logout />} />
+              <Route path="/register/" element={<RegisterUser />} />
+              <Route path="/logout/" element={<Logout />} />
+              <Route path="/clients/all/" element={<DisplayClients />} />
             </Routes>
           </Container>
         );
