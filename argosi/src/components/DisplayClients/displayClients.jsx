@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+
 const DisplayClients = (props) => {
   const [clients, setClients] = useState([]);
 
@@ -10,7 +11,7 @@ const DisplayClients = (props) => {
   }, [props.client]);
 
   const getClients = async () => {
-    let response = await axios.get(`http://127.0.0.1:8000/api/`);
+    let response = await axios.get(`http://127.0.0.1:8000/api/clients/all/`);
     setClients(response.data);
     console.log(clients);
   };
@@ -19,16 +20,24 @@ const DisplayClients = (props) => {
     <React.Fragment>
       <table>
         <thead>
-          <th>Clients</th>
+          <tr>
+            <th>
+              <h1>Clients</h1>
+            </th>
+          </tr>
         </thead>
         <tbody>
           <tr>
-            {clients.map((element) => {
+            {clients.map((clients) => {
               return (
                 <React.Fragment>
-                  <tr>
-                    <td>{element.clients}</td>
-                  </tr>
+                  <tr>{clients.first_name}</tr>
+                  <tr>{clients.last_name}</tr>
+                  <tr>{clients.email}</tr>
+                  <tr>{clients.sun_sign}</tr>
+                  <tr>{clients.moon_sign}</tr>
+                  <tr>{clients.rising_sign}</tr>
+                  &nbsp;
                 </React.Fragment>
               );
             })}
