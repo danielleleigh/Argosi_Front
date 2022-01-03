@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^3.3.1",
     "@progress/kendo-date-math": "^1.5.4",
     "@progress/kendo-licensing": "^1.2.1",
     "@progress/kendo-react-buttons": "^4.13.0",

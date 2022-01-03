@@ -8,7 +8,7 @@ import HomePage from "./components/HomePage/homePage";
 import Logout from "./components/Logout/logout";
 import RegisterUser from "./components/RegisterUser/RegisterUser";
 import DisplayClients from "./components/DisplayClients/displayClients";
-
+import form from "./components/Form/form";
 
 class App extends Component {
     constructor(props) {

@@ -35,7 +35,7 @@ const Navigation = ({ user }) => {
                 <NavDropdown.Item href="/logout">Log Out</NavDropdown.Item>
               </NavDropdown>
               <Nav.Link href="clients/all/">Clients</Nav.Link>
-              <Nav.Link href="/api/appointments/">Appointments</Nav.Link>
+              {/* <Nav.Link href="/api/appointments/">Appointments</Nav.Link> */}
             </React.Fragment>
           )}
         </Nav>
