@@ -10,7 +10,7 @@ const DisplayClients = (props) => {
   }, [props.client]);
 
   const getClients = async () => {
-    let response = await axios.get(`http://127.0.0.1:8000/api`);
+    let response = await axios.get(`http://127.0.0.1:8000/api/`);
     setClients(response.data);
     console.log(clients);
   };
@@ -19,7 +19,7 @@ const DisplayClients = (props) => {
     <React.Fragment>
       <table>
         <thead>
-          <td>Clients</td>
+          <th>Clients</th>
         </thead>
         <tbody>
           <tr>
