@@ -23,9 +23,7 @@ const Navigation = ({ user }) => {
             <React.Fragment>
               <NavDropdown title="Login">
                 <NavDropdown.Item href="/login">Log In</NavDropdown.Item>
-                <NavDropdown.Item href="/register">
-                  Register
-                </NavDropdown.Item>
+                <NavDropdown.Item href="/register">Register</NavDropdown.Item>
               </NavDropdown>
             </React.Fragment>
           )}
@@ -35,6 +33,7 @@ const Navigation = ({ user }) => {
                 <NavDropdown.Item href="/logout">Log Out</NavDropdown.Item>
               </NavDropdown>
               <Nav.Link href="clients/all/">Clients</Nav.Link>
+              <Nav.Link href="email/">Email Clients</Nav.Link>
               {/* <Nav.Link href="/api/appointments/">Appointments</Nav.Link> */}
             </React.Fragment>
           )}

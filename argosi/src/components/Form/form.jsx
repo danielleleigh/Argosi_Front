@@ -1,55 +1,75 @@
-import React from "react";
+import emailjs from "emailjs-com"
+import React, { useRef } from "react";
 
-export default class extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { feedback: "", name: "Name", email: "email@example.com" };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+export default function EmailClient() {
 
-  render() {
-    return (
-      <form className="test-mailing">
-        <h1>Let's see if it works</h1>
-        <div>
-          <textarea
-            id="test-mailing"
-            name="test-mailing"
-            onChange={this.handleChange}
-            placeholder="Post some lorem ipsum here"
-            required
-            value={this.state.feedback}
-            style={{ width: "100%", height: "150px" }}
-          />
+    function sendEmail(e) {
+        e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_tm98n57",
+        "template_hu4zzzc", e.target,
+        "user_BhyoEdnYub7E2ysRCasJj"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        });
+      e.target.reset()
+  };
+      return (
+      <div>
+        <div className="container">
+          <form onSubmit={sendEmail}>
+            <div className="row pt-5 mx-auto">
+              <div className="col-8 form-group mx-auto">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Client Name"
+                  name="name"
+                />
+              </div>
+            </div>
+            <div className="col-8 form-group pt-2 mx-auto">
+              <input
+                type="email"
+                className="form-control"
+                placeholder="Email Address"
+                name="email"
+              />
+            </div>
+            <div className="col-8 form-group pt-2 mx-auto">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Subject"
+                name="subject"
+              />
+            </div>
+            <div className="col-8 form-group pt-2 mx-auto">
+              <textarea
+                type="email"
+                className="form-control"
+                id=""
+                cols="30"
+                rows="8"
+                placeholder="Your Message"
+                name="message"
+              />
+            </div>
+            <div className="col-8 pt-3 mx-auto">
+              <input
+                type="submit"
+                className="btn btn-info"
+                value="Send Message"
+              />
+            </div>
+          </form>
         </div>
-        <input
-          type="button"
-          value="Submit"
-          className="btn btn--submit"
-          onClick={this.handleSubmit}
-        />
-      </form>
-    );
-  }
-
-  handleChange(event) {
-    this.setState({ feedback: event.target.value });
-  }
-
-  handleSubmit (event) {
-	const templateId = 'template_id';
-
-	this.sendFeedback(templateId, {message_html: this.state.feedback, from_name: this.state.name, reply_to: this.state.email})
-  }
-
-  sendFeedback (templateId, variables) {
-	window.emailjs.send(
-  	'gmail', templateId,
-  	variables
-  	).then(res => {
-    	console.log('Email successfully sent!')
-  	})
-  	// Handle errors here however you like, or use a React error boundary
-  	.catch(err => console.error('Oh well, you failed. Here some thoughts on the error that occured:', err))
-  }}
+      </div>
+)}
