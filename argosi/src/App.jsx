@@ -8,7 +8,7 @@ import HomePage from "./components/HomePage/homePage";
 import Logout from "./components/Logout/logout";
 import RegisterUser from "./components/RegisterUser/RegisterUser";
 import DisplayClients from "./components/DisplayClients/displayClients";
-import Form from "./components/Form/form";
+import EmailClient from "./components/Email/email";
 
 class App extends Component {
     constructor(props) {
@@ -40,7 +40,8 @@ class App extends Component {
               <Route path="/register/" element={<RegisterUser />} />
               <Route path="/logout/" element={<Logout />} />
               <Route path="/clients/all/" element={<DisplayClients />} />
-              <Route path="/email/" element={<Form />} />
+              <Route path="/email/" element={<EmailClient />} />
+              <Route path="/newsletter/" element={<EmailClient />} />
             </Routes>
           </Container>
         );
