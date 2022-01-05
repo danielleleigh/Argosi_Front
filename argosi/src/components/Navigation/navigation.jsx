@@ -21,24 +21,21 @@ const Navigation = ({ user }) => {
           <Nav.Link href="/">Home</Nav.Link>
           {!user && (
             <React.Fragment>
-              <NavDropdown title="Login">
-                <NavDropdown.Item href="/login">Log In</NavDropdown.Item>
-                <NavDropdown.Item href="/register">Register</NavDropdown.Item>
-              </NavDropdown>
+              <Nav.Link href="/book">Book</Nav.Link>
+              <Nav.Link href="/login">Login</Nav.Link>
             </React.Fragment>
           )}
           {user && (
             <React.Fragment>
-              <NavDropdown title="Logout">
-                <NavDropdown.Item href="/logout">Log Out</NavDropdown.Item>
-              </NavDropdown>
-              <NavDropdown title="Clients">
-                <NavDropdown.Item href="clients/all/">Client List</NavDropdown.Item>
+              <Nav.Link href="dashboard/">Dashboard</Nav.Link>
+              <Nav.Link href="clients/">Clients</Nav.Link>
+              <NavDropdown title="Contact">
                 <NavDropdown.Item href="/email">Email Client</NavDropdown.Item>
-                <NavDropdown.Item href="/newsletter">Send Newsletters</NavDropdown.Item>
+                <NavDropdown.Item href="https://argosi.substack.com/">
+                  Newsletter Board
+                </NavDropdown.Item>
               </NavDropdown>
-
-              {/* <Nav.Link href="/api/appointments/">Appointments</Nav.Link> */}
+              <Nav.Link href="/logout">Logout</Nav.Link>
             </React.Fragment>
           )}
         </Nav>
