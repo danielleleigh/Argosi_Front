@@ -11,7 +11,7 @@ const DisplayClients = (props) => {
   }, [props.client]);
 
   const getClients = async () => {
-    let response = await axios.get(`http://127.0.0.1:8000/api/clients/all/`);
+    let response = await axios.get(`http://127.0.0.1:8000/api/clients/`);
     setClients(response.data);
     console.log(clients);
   };
@@ -37,6 +37,10 @@ const DisplayClients = (props) => {
                   <tr>{clients.sun_sign}</tr>
                   <tr>{clients.moon_sign}</tr>
                   <tr>{clients.rising_sign}</tr>
+                  <tr>{clients.appointment}</tr>
+                  <tr>{clients.appointment_time}</tr>
+                  <tr>{clients.appointment_detail}</tr>
+
                   &nbsp;
                 </React.Fragment>
               );
