@@ -9,6 +9,10 @@ import Logout from "./components/Logout/logout";
 import RegisterUser from "./components/RegisterUser/RegisterUser";
 import DisplayClients from "./components/DisplayClients/displayClients";
 import EmailClient from "./components/Email/email";
+import AddClient from "./components/AddClient/addClient";
+import Dashboard from "./components/Dashboard/dashboard";
+import Book from "./components/Book/book";
+
 
 class App extends Component {
     constructor(props) {
@@ -39,9 +43,10 @@ class App extends Component {
               <Route path="/login/" element={<Login />} />
               <Route path="/register/" element={<RegisterUser />} />
               <Route path="/logout/" element={<Logout />} />
-              <Route path="/clients/all/" element={<DisplayClients />} />
+              <Route path="/clients/" element={<DisplayClients />} />
               <Route path="/email/" element={<EmailClient />} />
-              <Route path="/newsletter/" element={<EmailClient />} />
+              <Route path="/dashboard/" element={<Dashboard />} />
+              <Route path="/book/" element={<Book />} />
             </Routes>
           </Container>
         );
