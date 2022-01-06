@@ -6,12 +6,9 @@ import Login from "./components/Login/login"
 import Navigation from "./components/Navigation/navigation";
 import HomePage from "./components/HomePage/homePage";
 import Logout from "./components/Logout/logout";
-import RegisterUser from "./components/RegisterUser/RegisterUser";
 import DisplayClients from "./components/DisplayClients/displayClients";
 import EmailClient from "./components/Email/email";
-import AddClient from "./components/AddClient/addClient";
 import Dashboard from "./components/Dashboard/dashboard";
-import Book from "./components/Book/book";
 import Footer from "./components/Footer/footer";
 
 
@@ -50,13 +47,12 @@ class App extends Component {
               <Navigation user={user} />
               <Routes>
                 <Route path="/" element={<HomePage />} />
-                <Route path="/login/" element={<Login />} />
-                <Route path="/register/" element={<RegisterUser />} />
-                <Route path="/logout/" element={<Logout />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/logout" element={<Logout />} />
                 <Route path="/clients/" element={<DisplayClients />} />
-                <Route path="/email/" element={<EmailClient />} />
+                <Route path="/email" element={<EmailClient />} />
                 <Route path="/dashboard/" element={<Dashboard />} />
-                <Route path="/book/" element={<Book />} />
+
               </Routes>
               <Footer />
             </Container>
