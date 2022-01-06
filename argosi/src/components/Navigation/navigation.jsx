@@ -1,23 +1,35 @@
 import React from "react";
-
+import "./navigation.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
+
 
 
 const Navigation = ({ user }) => {
   return (
     <div>
-      <Navbar bg="black" variant="dark">
-        <Navbar.Brand>
+      <Navbar
+        style={{
+          alignContent: "center",
+          backgroundColor: "#9DA5CE",
+          variant: "light",
+          width: "100%",
+          fontSize: "24px",
+          fontFamily: "MoonwildDecorative",
+          color: "white",
+        }}
+      >
+        <Navbar.Brand style={{ paddingRight: "25%" }}>
           <img
             src="https://i.ibb.co/b1b9kbp/Blank-500-x-500-2.png"
             alt="Blank-2000-x-2000-3"
             border="0"
             height="100"
             margin="0"
+            
           />
         </Navbar.Brand>
-        <Nav>
+        <Nav style={{ display: "flex" }}>
           <Nav.Link href="/">Home</Nav.Link>
           {!user && (
             <React.Fragment>
