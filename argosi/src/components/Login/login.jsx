@@ -31,7 +31,16 @@ const Login = () => {
     <div>
       <Container style={{ flex: 1, width: "50%", padding: "10px" }}>
         <FormLabel>
-          <h1>Login</h1>
+          <h1
+            style={{
+              color: "#0E162C",
+              fontFamily: "MoonwildDecorative",
+              textShadow: "50%",
+            }}
+          >
+            {" "}
+            LOGIN
+          </h1>
         </FormLabel>
         <Form id="contact-form" onSubmit={onFormSubmit}>
           <Form.Group controlId="formBasicUsername">
@@ -46,7 +55,7 @@ const Login = () => {
           &nbsp;
           <Form.Group controlId="formBasicPassword">
             <Form.Control
-              type="text"
+              type="password"
               name="password"
               placeholder="password"
               value={userPassword}
