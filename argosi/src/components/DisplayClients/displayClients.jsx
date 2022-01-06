@@ -1,4 +1,5 @@
 import React from "react";
+import { Table, Card, Container, Row, Col } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -18,39 +19,66 @@ const DisplayClients = (props) => {
 
   return (
     <React.Fragment>
-      <table>
-        <thead>
-          <tr>
-            <th>
-              <h1>Clients</h1>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            {clients.map((clients) => {
-              return (
-                <React.Fragment>
-                  <tr>{clients.first_name}</tr>
-                  <tr>{clients.last_name}</tr>
-                  <tr>{clients.email}</tr>
-                  <tr>{clients.sun_sign}</tr>
-                  <tr>{clients.moon_sign}</tr>
-                  <tr>{clients.rising_sign}</tr>
-                  <tr>{clients.appointment}</tr>
-                  <tr>{clients.appointment_time}</tr>
-                  <tr>{clients.appointment_detail}</tr>
-
-                  &nbsp;
-                </React.Fragment>
-              );
-            })}
-          </tr>
-        </tbody>
-      </table>
+      {/* <img src="/clients.png" style={{resize=""}} /> */}
+      <div>
+        <h1
+          style={{
+            textAlign: "center",
+            color: "#FFC4C1",
+            fontFamily: "MoonwildDecorative",
+            fontWeight: "bold",
+            padding: "2%",
+          }}
+        >
+          Clients
+        </h1>
+      </div>
+      {clients.map((clients) => {
+        return (
+          <Container
+            style={{
+              flex: 1,
+              width: "50%",
+              //   alignContent: "center",
+            }}
+          >
+            <Card
+              style={{
+                width: "40rem",
+                background: "#0E162C",
+                // opacity: 0.5,
+                padding: "10%",
+                border: "solid",
+                borderColor: "#131313",
+                color: "whitesmoke",
+              }}
+              className="mb-2"
+            >
+              <Card.Body>
+                <Card.Title>
+                  {clients.first_name} {clients.last_name}
+                </Card.Title>
+                <Card.Subtitle className="mb-2 text-muted">
+                  Client Detail
+                </Card.Subtitle>
+                <Card.Text>
+                  {clients.email} <br />
+                  {clients.sun_sign} <br />
+                  {clients.moon_sign} <br />
+                  {clients.rising_sign} <br />
+                  {clients.appointment} <br />
+                  {clients.appointment_time} <br />
+                  {clients.appointment_detail} <br />
+                </Card.Text>
+              </Card.Body>
+            </Card>
+            &nbsp;
+          </Container>
+        );
+      })}
     </React.Fragment>
   );
-};
+            }
 
 export default DisplayClients;
 
