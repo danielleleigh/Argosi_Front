@@ -3,6 +3,7 @@ import { Table, Card, Container, Row, Col } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+//cards displaying client info from backend
 
 const DisplayClients = (props) => {
   const [clients, setClients] = useState([]);
@@ -28,6 +29,7 @@ const DisplayClients = (props) => {
             fontFamily: "MoonwildDecorative",
             fontWeight: "bold",
             padding: "2%",
+            textDecoration: "underline",
           }}
         >
           Clients
@@ -66,7 +68,9 @@ const DisplayClients = (props) => {
                 >
                   Client Detail
                 </Card.Subtitle>
-                <Card.Text style={{ fontFamily: "MoonwildDecorative", fontSize: '16px'}}>
+                <Card.Text
+                  style={{ fontFamily: "MoonwildDecorative", fontSize: "16px" }}
+                >
                   {clients.email} <br />
                   {clients.sun_sign} <br />
                   {clients.moon_sign} <br />

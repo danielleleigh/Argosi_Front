@@ -3,6 +3,8 @@ import { ReactEmbeddedGoogleCalendar } from "react-embedded-google-calendar";
 import SchedulerCalendar from "scheduler-calendar";
 import "scheduler-calendar/dist/index.css";
 
+//user dashboard. hold calendar that will show appointments
+
 class Dashboard extends Component {
   render() {
     return (
@@ -19,7 +21,7 @@ class Dashboard extends Component {
             
           }}
         >
-          Calendar
+          Appointment Book
         </h1>
 
         <div style={{ marginLeft: "20%", paddingTop: "1%" }}>
