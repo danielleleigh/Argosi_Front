@@ -1,19 +1,18 @@
 import React, { Component } from "react";
 import { ReactEmbeddedGoogleCalendar } from "react-embedded-google-calendar";
 import SchedulerCalendar from "scheduler-calendar";
-import "scheduler-calendar/dist/index.css";
+import {Carousel} from 'react-bootstrap'
 
-class HomePage extends Component {
-  render() {
-    return (
-      <div>
 
-      </div>
-    );
-  }
-}
+// class HomePage extends Component {
+//   render() {
+//     return (
 
-export default HomePage;
+    
+  
+// }
+
+// export default HomePage;
 // import * as React from "react";
 // import Paper from "@material-ui/core/Paper";
 // import { ViewState } from "@devexpress/dx-react-scheduler";
