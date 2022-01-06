@@ -55,13 +55,18 @@ const DisplayClients = (props) => {
               className="mb-2"
             >
               <Card.Body>
-                <Card.Title>
-                  {clients.first_name} {clients.last_name}
+                <Card.Title style={{ fontFamily: "MoonwildDecorative" }}>
+                  <h1>
+                    {clients.first_name} {clients.last_name}
+                  </h1>
                 </Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">
+                <Card.Subtitle
+                  style={{ fontFamily: "MoonwildDecorative" }}
+                  className="mb-2 text-muted"
+                >
                   Client Detail
                 </Card.Subtitle>
-                <Card.Text>
+                <Card.Text style={{ fontFamily: "MoonwildDecorative", fontSize: '16px'}}>
                   {clients.email} <br />
                   {clients.sun_sign} <br />
                   {clients.moon_sign} <br />
