@@ -1,13 +1,27 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+font-family: "Sunroll";
+src: local("Sunroll"),
+ url(./fonts/Sunroll-Bold.ttf) format("truetype")
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+font-family: "OnMyWay";
+src: local("OnMyWay"),
+ url(./fonts/OnMyWay.ttf) format("truetype")
+
 }
+
+@font-face {
+font-family: "Sugarpie";
+src: local("Sugarpie"),
+ url(./fonts/Sugarpie.ttf) format("truetype")
+
+}
+@font-face {
+font-family: "MoonwildDecorative";
+src: local("MoonwildDecorative"),
+ url(./fonts/MoonwildDecorative.ttf) format("truetype")
+
+}
+
