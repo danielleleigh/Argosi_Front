@@ -12,6 +12,7 @@ import EmailClient from "./components/Email/email";
 import AddClient from "./components/AddClient/addClient";
 import Dashboard from "./components/Dashboard/dashboard";
 import Book from "./components/Book/book";
+import Footer from "./components/Footer/footer";
 
 
 class App extends Component {
@@ -36,19 +37,30 @@ class App extends Component {
         const user = this.state.user;
 
         return (
-          <Container>
-            <Navigation user={user} />
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/login/" element={<Login />} />
-              <Route path="/register/" element={<RegisterUser />} />
-              <Route path="/logout/" element={<Logout />} />
-              <Route path="/clients/" element={<DisplayClients />} />
-              <Route path="/email/" element={<EmailClient />} />
-              <Route path="/dashboard/" element={<Dashboard />} />
-              <Route path="/book/" element={<Book />} />
-            </Routes>
-          </Container>
+          <div
+            className="font-face-gm"
+            style={{
+              background: 'url("/cbpaper.jpg")',
+              backgroundRepeat: "repeat",
+              backgroundSize: "cover",
+              backgroundPosition: "fixed",
+            }}
+          >
+            <Container>
+              <Navigation user={user} />
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/login/" element={<Login />} />
+                <Route path="/register/" element={<RegisterUser />} />
+                <Route path="/logout/" element={<Logout />} />
+                <Route path="/clients/" element={<DisplayClients />} />
+                <Route path="/email/" element={<EmailClient />} />
+                <Route path="/dashboard/" element={<Dashboard />} />
+                <Route path="/book/" element={<Book />} />
+              </Routes>
+              <Footer />
+            </Container>
+          </div>
         );
     }
 }
