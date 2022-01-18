@@ -31,7 +31,8 @@ export default function EmailClient() {
               color: "#FFC4C1",
               fontFamily: "MoonwildDecorative",
               fontWeight: "bold",
-              padding: "2%",
+              paddingTop: "90px",
+              paddingBottom: "10px",
               textDecoration: "underline"
             }}
           >

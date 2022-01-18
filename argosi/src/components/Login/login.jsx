@@ -29,11 +29,11 @@ const Login = () => {
 
   return (
     <div>
-      <Container style={{ flex: 1, width: "50%", padding: "10px" }}>
+      <Container style={{ flex: 1, width: "50%", padding: "275px" }}>
         <FormLabel>
           <h1
             style={{
-              color: "#0E162C",
+              color: "white",
               fontFamily: "MoonwildDecorative",
               textShadow: "50%",
             }}
@@ -62,8 +62,8 @@ const Login = () => {
               onChange={(e) => setUserPassword(e.target.value)}
             />
           </Form.Group>
-          <Button block size="lg" type="submit" disabled={!validateForm()}>
-            Login
+          <Button type="submit" variant="dark">
+            Submit
           </Button>
         </Form>
       </Container>

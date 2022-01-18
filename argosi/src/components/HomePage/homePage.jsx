@@ -121,9 +121,9 @@ class HomePage extends Component {
           </h3>
           <div style={{ alignContent: "center", paddingLeft: "30%" }}>
             <iframe
-              src="https://app.squarespacescheduling.com/schedule.php?owner=24990762&calendarID=6383681"
+              src="https://app.squarespacescheduling.com/schedule.php?owner=25082385"
               title="Schedule Appointment"
-              width="60%"
+              width="100%"
               height="800"
               frameBorder="0"
             ></iframe>
