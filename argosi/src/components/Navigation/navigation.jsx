@@ -1,6 +1,7 @@
 import React from "react";
 import "./navigation.css";
 import "bootstrap/dist/css/bootstrap.css";
+
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 
 
@@ -15,8 +16,9 @@ const Navigation = ({ user }) => {
           variant: "light",
           width: "100%",
           fontSize: "20px",
-          fontFamily: 'Blanka',
+          fontFamily: 'Blanka-Regular',
           color: "white",
+          wordSpacing: '30'
         }}
       >
         <Navbar.Brand style={{ paddingRight: "25%" }}>
