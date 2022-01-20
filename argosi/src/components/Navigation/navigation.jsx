@@ -14,8 +14,8 @@ const Navigation = ({ user }) => {
           backgroundColor: "transparent",
           variant: "light",
           width: "100%",
-          fontSize: "24px",
-          fontFamily: "MoonwildDecorative",
+          fontSize: "20px",
+          fontFamily: 'Blanka',
           color: "white",
         }}
       >
