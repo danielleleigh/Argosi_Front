@@ -37,10 +37,11 @@ class App extends Component {
           <div
             className="font-face-gm"
             style={{
-              background: 'url(/mainbackground.jpg)',
-              backgroundRepeat: "repeat",
+              backgroundImage: `url(${process.env.PUBLIC_URL + '/newback.jpg'})`,
+              minHeight: '100vh',
               backgroundSize: "cover",
-              backgroundPosition: "center"
+              backgroundRepeat: "repeat"
+              
             }}
           >
             <Container>

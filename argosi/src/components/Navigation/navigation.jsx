@@ -9,9 +9,9 @@ const Navigation = ({ user }) => {
   return (
     <div>
       <Navbar
-        style={{
+        elevation={0} style={{
           alignContent: "center",
-          backgroundColor: "#9DA5CE",
+          backgroundColor: "transparent",
           variant: "light",
           width: "100%",
           fontSize: "24px",
@@ -21,10 +21,10 @@ const Navigation = ({ user }) => {
       >
         <Navbar.Brand style={{ paddingRight: "25%" }}>
           <img
-            src="/logoargosi.png"
+            src="/a.png"
             alt="Blank-2000-x-2000-3"
             border="0"
-            height="100"
+            height="150"
             margin="0"
             
           />

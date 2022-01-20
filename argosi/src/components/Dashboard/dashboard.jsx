@@ -14,7 +14,7 @@ class Dashboard extends Component {
             textAlign: "center",
             textDecoration: "underline",
             color: "#FFC4C1",
-            fontFamily: "MoonwildDecorative",
+            fontFamily: "Blanka",
             fontWeight: "bold",
             paddingTop: "1%",
             paddingBottom: "75px",
