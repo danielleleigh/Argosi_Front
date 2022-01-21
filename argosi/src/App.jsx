@@ -33,7 +33,7 @@ class App extends Component {
       <div
         className="font-face-gm"
         style={{
-          background: 'url("/cbpaper.jpg")',
+          background: 'url("/cb.jpg")',
           backgroundRepeat: "repeat",
           backgroundSize: "cover",
           backgroundPosition: "fixed",

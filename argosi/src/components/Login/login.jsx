@@ -1,47 +1,35 @@
-import React from 'react'
-import axios from 'axios'
-import {useState} from 'react'
-import {Container, Form, Button, FormLabel} from 'react-bootstrap'
-
+import React from "react";
+import axios from "axios";
+import { useState } from "react";
+import { Container, Form, Button, FormLabel } from "react-bootstrap";
 const Login = () => {
-  const [userName, setUserName] = useState('');
-  const [userPassword, setUserPassword] = useState('');
-
+  const [userName, setUserName] = useState("");
+  const [userPassword, setUserPassword] = useState("");
   const onFormSubmit = (e) => {
     e.preventDefault();
     postUser(userName, userPassword);
   };
-
-    function validateForm() {
-      return userName.length > 0 && userPassword.length > 0;
-    }
-
+  function validateForm() {
+    return userName.length > 0 && userPassword.length > 0;
+  }
   const postUser = async (name, password) => {
-    let payload = {username: name, password:password};
+    let payload = { username: name, password: password };
     let response = await axios.post(
       `http://127.0.0.1:8000/api/auth/login/`,
       payload
     );
-      console.log(response.data);
-      localStorage.setItem("token", response.data.access);
-      window.location = "/"
+    console.log(response.data);
+    localStorage.setItem("token", response.data.access);
+    window.location = "/";
   };
-
   return (
     <div>
-      <Container
-        style={{
-          flex: 1,
-          width: "50%",
-          paddingLeft: "150px",
-          paddingRight: "150px",
-        }}
-      >
+      <Container style={{ flex: 1, width: "50%", padding: "10px" }}>
         <FormLabel>
           <h1
             style={{
-              color: "#EDE6D4",
-              fontFamily: "Blanka-Regular",
+              color: "#0E162C",
+              fontFamily: "MoonwildDecorative",
               textShadow: "50%",
             }}
           >
@@ -69,21 +57,12 @@ const Login = () => {
               onChange={(e) => setUserPassword(e.target.value)}
             />
           </Form.Group>
-          <br />
-          <Button
-            type="submit"
-            variant="dark"
-            style={{
-              backgroundColor: "#E68D05",
-              fontFamily: "Blanka-Regular", border: "none"
-            }}
-          >
-            Submit
+          <Button block size="lg" type="submit" disabled={!validateForm()}>
+            Login
           </Button>
         </Form>
       </Container>
     </div>
   );
-}
-
+};
 export default Login;

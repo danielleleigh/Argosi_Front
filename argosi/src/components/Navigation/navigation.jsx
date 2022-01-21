@@ -1,33 +1,27 @@
 import React from "react";
 import "./navigation.css";
 import "bootstrap/dist/css/bootstrap.css";
-
 import { Nav, Navbar, NavDropdown } from "react-bootstrap";
-
-
-
 const Navigation = ({ user }) => {
   return (
     <div>
       <Navbar
-        elevation={0}
         style={{
           alignContent: "center",
-          backgroundColor: "transparent",
+          backgroundColor: "#9DA5CE",
           variant: "light",
           width: "100%",
-          fontSize: "20px",
-          fontFamily: "Blanka-Regular",
+          fontSize: "24px",
+          fontFamily: "MoonwildDecorative",
           color: "white",
-          wordSpacing: "30",
         }}
       >
         <Navbar.Brand style={{ paddingRight: "25%" }}>
           <img
-            src="/a.png"
+            src="/logoargosi.png"
             alt="Blank-2000-x-2000-3"
             border="0"
-            height="150"
+            height="100"
             margin="0"
           />
         </Navbar.Brand>
@@ -35,8 +29,7 @@ const Navigation = ({ user }) => {
           <Nav.Link href="/">Home</Nav.Link>
           {!user && (
             <React.Fragment>
-              <Nav.Link href="/login">Business Login</Nav.Link>
-              <Nav.Link href="/customerlogin">Customer Login</Nav.Link>
+              <Nav.Link href="/login">Login</Nav.Link>
             </React.Fragment>
           )}
           {user && (
@@ -57,5 +50,4 @@ const Navigation = ({ user }) => {
     </div>
   );
 };
-
 export default Navigation;

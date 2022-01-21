@@ -1,46 +1,46 @@
 import React, { Component } from "react";
 import { ReactEmbeddedGoogleCalendar } from "react-embedded-google-calendar";
 import SchedulerCalendar from "scheduler-calendar";
-import { Table, Card, Container, Row, Col, Carousel } from "react-bootstrap";
+import { Carousel } from "react-bootstrap";
 
-//landing page. allows customers to visit the app and make appointment 
-//or see articles. also available after login for user to book clients 
+//landing page. allows customers to visit the app and make appointment
+//or see articles. also available after login for user to book clients
 //the appointments.
 
 class HomePage extends Component {
   render() {
     return (
       <React.Fragment>
-        <Container
-          style={{ width: "1000px", paddingLeft: "10%", textAlign: "center" }}
-        >
-          <Carousel fade>
+        <div>
+          <Carousel fade style={{ padding: "10%" }}>
             <Carousel.Item>
-              <img className="d-block w-100" src="/article1.png" alt="" />
+              <img
+                className="d-block w-100"
+                src="/aquariusbook.jpg"
+                alt="Aquarius Book"
+              />
               <Carousel.Caption>
                 <h3
                   style={{
-                    color: "#EDE6D4",
-                    fontFamily: "Blanka-Regular",
+                    color: "white",
+                    fontFamily: "MoonwildDecorative",
                     textShadow: "50%",
                     fontWeight: "bold",
-                    fontSize: "20px",
-                    letterSpacing: "5px",
                   }}
                 >
-                  "Release These 4 Unhealthy Patterns Under The Pisces Full
-                  Moon"
+                  'Astrology is a vital tool for understanding our place in the
+                  world and the universal forces that move us. ’
                 </h3>
                 <h4>
                   <a
                     style={{
-                      color: "#E5CEAD",
-                      fontFamily: "Blanka-Regular",
-                      letterSpacing: "15px",
+                      color: "#FFC4C1",
+                      fontFamily: "MoonwildDecorative",
+                      fontWeight: "bold",
                     }}
-                    href="https://www.astrotaylormoon.com/post/release-these-4-unhealthy-patterns-under-the-pisces-full-moon-to-achieve-your-heart-s-desire"
+                    href="https://read.amazon.com/kp/embed?asin=B07TTKYZ2P&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_E6WJ44JG1K0VBRNZAEZA"
                   >
-                    Read Here
+                    Purchase "Aquarius" by Taylor Moon
                   </a>
                 </h4>
               </Carousel.Caption>
@@ -48,33 +48,29 @@ class HomePage extends Component {
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src="/article2.png"
+                src="/taylorarticle.jpeg"
                 alt="City Bureau"
               />
               <Carousel.Caption>
                 <h3
                   style={{
-                    color: "white",
-                    fontFamily: "Blanka-Regular",
-                    textShadow: "50%",
+                    color: "#0E162C",
+                    fontFamily: "MoonwildDecorative",
                     fontWeight: "bold",
-                    fontSize: "20px",
-                    letterSpacing: "5px",
                   }}
                 >
-                  "Release These 4 Unhealthy Patterns Under The Pisces Full
-                  Moon"
+                  "Spiritual Healing at the Center of Self-Empowerment"
                 </h3>
                 <h4>
                   <a
                     style={{
-                      color: "#FD3F00",
-                      fontFamily: "Blanka-Regular",
-                      letterSpacing: "15px",
+                      color: "#FFC4C1",
+                      fontFamily: "MoonwildDecorative",
+                      fontWeight: "bold",
                     }}
-                    href="https://www.astrotaylormoon.com/post/5-wellness-tips-for-your-zodiac-sign-during-pisces-season"
+                    href="https://www.citybureau.org/newswire/2021/5/17/spiritual-healing-at-the-center-of-self-empowerment"
                   >
-                    Read Here
+                    Read Article
                   </a>
                 </h4>
               </Carousel.Caption>
@@ -88,12 +84,9 @@ class HomePage extends Component {
               <Carousel.Caption>
                 <h3
                   style={{
-                    color: "#FD3F00",
-                    fontFamily: "Blanka-Regular",
-                    textShadow: "50%",
+                    color: "#0E162C",
+                    fontFamily: "MoonwildDecorative",
                     fontWeight: "bold",
-                    fontSize: "20px",
-                    letterSpacing: "5px",
                   }}
                 >
                   "Good Morning, Mercury Retrograde!"
@@ -102,22 +95,44 @@ class HomePage extends Component {
                   {" "}
                   <a
                     style={{
-                      color: "#EC9A93",
-                      fontFamily: "Blanka-Regular",
-                      letterSpacing: "15px",
+                      color: "#D4A58B",
+                      fontFamily: "MoonwildDecorative",
+                      fontWeight: "bold",
                     }}
                     href="https://parade.com/1102906/taylormoon/what-is-mercury-retrograde/"
                   >
-                    Read Here
+                    Read Article
                   </a>
                 </h4>
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>
-        </Container>
+          <h3
+            style={{
+              color: "#0E162C",
+              fontFamily: "MoonwildDecorative",
+              textAlign: "center",
+              fontWeight: "bold",
+            }}
+          >
+            BOOK WITH TAYLOR MOON 🔮
+          </h3>
+          <div style={{ alignContent: "center", paddingLeft: "30%" }}>
+            <iframe
+              src="https://app.squarespacescheduling.com/schedule.php?owner=24990762&calendarID=6383681"
+              title="Schedule Appointment"
+              width="60%"
+              height="800"
+              frameBorder="0"
+            ></iframe>
+            <script
+              src="https://embed.acuityscheduling.com/js/embed.js"
+              type="text/javascript"
+            ></script>
+          </div>
+        </div>
       </React.Fragment>
     );
-  }  }
-
+  }
+}
 export default HomePage;
-        

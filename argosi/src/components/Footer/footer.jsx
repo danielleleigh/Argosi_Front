@@ -1,37 +1,24 @@
 import React from "react";
-import { Nav, Navbar, NavDropdown, NavbarBrand, Container } from "react-bootstrap";
+import { MDBFooter, MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
 
 export default function Footer() {
   return (
-    <React.Fragment>
-      <nav class="navbar fixed-bottom navbar-light bg-transparent " style={{paddingLeft:"37%", paddingRight:"50%"}}>
-        <div class="container-fluid">
-          <a class="navbar-brand" >
-            {" "}
-            <div
-              style={{
-                backgroundColor: "Transparent",
-                alignItems: "center",
-                textAlign: "center",
-                fontFamily: "Blanka-Regular",
-                color: "#E68D05",
-              }}
-            >
-              &copy; {new Date().getFullYear()} Copyright:{" "}
-              <a
-                style={{
-                  fontFamily: "Blanka-Regular",
-                  color: "#E68D05",
-                }}
-                className="text"
-              >
-                Danielle Allen
-              </a>
-            </div>
-          </a>
-        </div>
-      </nav>
+    <MDBFooter backgroundColor="light" className="text-center text-lg-left">
+      <MDBContainer className="p-4">
+        <MDBRow></MDBRow>
+      </MDBContainer>
 
-    </React.Fragment>
+      <div
+        className="text-center p-3"
+        style={{
+          backgroundColor: "#9DA5CE",
+          opacity: "",
+          fontFamily: "MoonwildDecorative",
+        }}
+      >
+        &copy; {new Date().getFullYear()} Copyright:{" "}
+        <a className="text-dark">Danielle Allen</a>
+      </div>
+    </MDBFooter>
   );
 }
