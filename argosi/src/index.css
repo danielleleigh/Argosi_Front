@@ -13,12 +13,6 @@ src: local("OnMyWay"),
 }
 
 @font-face {
-font-family: "Sugarpie";
-src: local("Sugarpie"),
- url(./fonts/Sugarpie.ttf) format("truetype")
-
-}
-@font-face {
 font-family: "MoonwildDecorative";
 src: local("MoonwildDecorative"),
  url(./fonts/MoonwildDecorative.ttf) format("truetype")
