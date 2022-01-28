@@ -1,4 +1,4 @@
-<h1>About Argosi</h1>
+<h1>About Argosi*</h1>
 
 <img width="1412" alt="Screen Shot 2022-01-28 at 2 43 33 PM" src="https://user-images.githubusercontent.com/92110258/151618673-38205930-0067-4940-a0b1-b542b0d96caa.png">
 
@@ -20,3 +20,4 @@
         
 </ul>
 
+*this file only contains the front end of the argosi project.
